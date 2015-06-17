@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f0d1e116680e447f81ff0dd7046f7069" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="DataModel.Barat" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Login" Width="1.5" PointX="5.375" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Mehndi" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Walima" Width="1.5" PointX="5.375" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.Comment" Width="1.5" PointX="0.75" PointY="6.75" />
+        <AssociationConnector Association="DataModel.MehndiComment" />
+        <EntityTypeShape EntityType="DataModel.Wish" Width="1.5" PointX="3.375" PointY="6.75" />
+        <AssociationConnector Association="DataModel.FK_Wish_ToTable_1" />
+        <AssociationConnector Association="DataModel.FK_Wish_ToTable" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

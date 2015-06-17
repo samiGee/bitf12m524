@@ -1,0 +1,66 @@
+﻿@model final_project.Models.Mehndi
+
+
+
+<html>
+<head>
+    <title>
+
+    </title>
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/Content/js/bootstrap.js" type="text/javascript"></script>
+    <script src="~/Content/js/bootstrap.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Weedding Planner</a>
+
+
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+
+
+
+                <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+
+
+                <li>
+                    @Html.ActionLink("Designs", "Designs", "Home")
+                </li>
+                <li>
+                    @Html.ActionLink("Logout", "Logout", "Home")
+                </li>
+                
+
+            </ul>
+
+        </div>
+
+    </nav>
+ 
+
+
+    <form action="/Home/Search1" method="post">
+
+        Search<input type="text" placeholder="Search" name="Price" />
+
+        <button onclick="" type="submit" style="margin-left:60px; color:black" class="btn btn-danger">Search</button>
+    </form>
+
+   
+
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+

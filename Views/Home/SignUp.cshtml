@@ -1,0 +1,105 @@
+﻿@model final_project.Models.Login
+
+<html>
+<head>
+    <title>
+
+    </title>
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <script src="~/Content/js/bootstrap.js" type="text/javascript"></script>
+    <script src="~/Content/js/bootstrap.min.js" type="text/javascript"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Weedding Planner</a>
+
+
+        </div>
+        <div>
+
+
+            <ul class="nav navbar-nav">
+            
+                <li>@Html.ActionLink("LogIn", "LogIn", "Home")</li>
+                
+               
+
+            </ul>
+        </div>
+    </nav>
+    
+        @using (Html.BeginForm("SignUp1", "Home", FormMethod.Post))
+        {
+
+
+            <div style="text-align:center">
+                <img src="~/Images/SignUp.jpg" width="400" height="400">
+            </div>
+            <div id="checking">Checking...</div>
+            <div>
+
+
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name)
+
+                <br />
+
+                <input type="button" id="b1" value="Check" />
+                <br />
+                <div id="result"></div>
+                @Scripts.Render("~/bundles/jquery")
+                <script>
+
+                    $(document).ready(function () {
+
+                        $('#checking').hide();
+
+                        $('#b1').click(function () {
+
+                            var name = $('#Name').val();
+
+                            //alert('User Name ='+ userName);
+                            $('#checking').show();
+                            $.getJSON("/home/Verify?Name=" + name, function (data) {
+                                $('#checking').hide();
+                                if (data) {
+                                    $('#result').text("User already exists in database");
+
+                                }
+                                else {
+                                    $('#result').text("User Name is available");
+                                }
+                            });
+
+                        });
+
+                    });
+                </script>
+            </div>
+
+
+            @Html.LabelFor(m => m.Pass)
+            // @Html.TextBoxFor(m=>m.Pass)
+            @Html.PasswordFor(m => m.Pass)
+            <br />
+            <br />
+
+
+            <button type="submit" style="margin-left:60px; color:black" class="btn btn-danger">SignUp</button>
+        }
+
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
