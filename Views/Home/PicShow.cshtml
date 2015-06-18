@@ -17,7 +17,7 @@
 <body>
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Weedding Planner</a>
+            <a class="navbar-brand" href="#">Weadding Planner </a>
 
 
         </div>
@@ -35,7 +35,7 @@
                 <li>
                     @Html.ActionLink("Logout", "Logout", "Home")
                 </li>
-               
+
 
             </ul>
 
@@ -44,32 +44,32 @@
     </nav>
     @foreach (Mehndi i in ViewBag.imgs)
     {
-        <img src="~/Files/@i.Images " height="400" width="800"/>
-        
-        <br/>
-        <br/>
-        foreach( Comment c in i.Comments)
+        <img src="~/Files/@i.Images " height="400" width="800" />
+
+        <br />
+        <br />
+        foreach (Comment c in i.Comments)
         {
             @c.Comment1
-        <br/>
-        <br/>
-        
+            <br />
+            <br />
+
         }
-         <form action="/Home/AddComment" method="post">
-             <input type="hidden" name="MId" value="@i.Id" />
+        <form action="/Home/AddComment" method="post">
+            <input type="hidden" name="MId" value="@i.Id" />
 
-        @*<textarea name="Comment1" cols="40" rows="1"></textarea>*@
-             <input type="text" name="Comment1" placeholder="Comment" >
-             <br/>
-             <br/>
+            @*<textarea name="Comment1" cols="40" rows="1"></textarea>*@
+            <input type="text" name="Comment1" placeholder="Comment">
+            <br />
+            <br />
 
-             <button type="submit">Comment</button>
+            <button type="submit">Comment</button>
 
-    </form>   
+        </form>
     }
 
 
-   
+
     </form>
 </body>
 </html>
